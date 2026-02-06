@@ -594,7 +594,7 @@ const textNodes =  [
 
       {
         id: 225,
-        backgroundClass: 'ending2',
+        backgroundClass: 'ending1',
         text: 'Restart?',
 
         options: [
