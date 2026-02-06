@@ -1,0 +1,279 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+.hidden {
+    display: none;
+}
+
+
+
+* , *::before, *::after {
+    box-sizing: border-box;
+    font-family: "Tiny5", sans-serif;
+
+
+
+}
+
+
+
+#game {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+}
+
+#home-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+
+.home-screen {
+  position: fixed;
+  inset: 0;
+  background: black;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  text-align: center;
+}
+
+.home-screen h1 {
+  font-size: 3rem;
+  letter-spacing: 0.15em;
+}
+
+.menu-btn {
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  background: none;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.menu-btn:hover {
+  background: white;
+  color: black;
+}
+
+.about {
+  max-width: 400px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    background-color: rgb(20, 25, 30);
+
+}
+
+.container {
+
+    position: absolute;
+    bottom: 5%;
+    left: 35%;
+    width: 400px;
+    max-width: 80%;
+    background-color: rgb(193, 191, 177);
+    padding: 10px;
+    border-radius: 5px; 
+    box-shadow: 0 0 10px 2px;
+    z-index: 2;
+
+     
+
+
+}
+
+.container.speaker-wolf {
+  background: rgba(10, 10, 10, 0.92);
+  color: #f2f2f2;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  border-radius: 14px;
+}
+
+.container.speaker-wolf .btn {
+  background-color: aquamarine;
+    border: 1px solid rgb(167, 209, 255);
+    border-radius: 5px;
+    padding: 5px, 10px;
+    color: rgb(94, 44, 44); 
+    outline: none; 
+}
+
+.container.speaker-wolf .btn:hover {
+     background-color: red;
+    transition: .5s;
+}
+
+
+.btn-grid {
+    display: grid; 
+    grid-template-columns: repeat(2, auto); 
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+.btn {
+    background-color: rgb(75, 156, 197);
+    border: 1px solid rgb(167, 209, 255);
+    border-radius: 5px;
+    padding: 5px, 10px;
+    color: rgb(37, 37, 34); 
+    outline: none; 
+
+
+}
+
+.btn:hover {
+    background-color: rgb(195, 117, 117);
+    transition: .5s;
+}
+
+.text {
+
+    font-family : sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    max-width: 300px;
+    padding: 1em;
+}
+
+
+.background {
+    background-color: rgb(9, 8, 9);
+    width: 100vw;
+    height:100vh;
+    transition: .5s;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    border: 20px solid rgb(13, 13, 13);
+}
+
+.background.bg-1 {
+    background-image: url("img/bg-1.gif");
+    
+
+
+}
+
+.background.bg-12 {
+    background-image: url("img/bg-12.gif");
+}
+
+.background.bg-2 {
+    background-image: url("img/woods.png");
+
+}
+
+.background.bg-3 {
+    background-image: url("img/wolff.gif");
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+.background.fade-black::after {
+  opacity: 1;
+}
+
+
+.background.blackout::after {
+  opacity: 1;
+  transition: opacity 0s;
+}
+
+.background.ending1 {
+    background-image: url("img/ending1.gif");
+}
+
+.background.ending2 {
+    background-image: url("img/ending2.gif")
+}
+
+
+/* ignore the following */
+
+.face {
+    position: relative;
+    width: 100vw;
+    height: 400vh;
+    background-image: url("img/face.png");
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+
+.eyes {
+    position: relative;
+    top: -40px;
+    display: flex; 
+   
+    
+
+
+}
+
+.eyes .eye {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: block;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 15px ;
+
+
+
+}
+
+.eyes .eye::before {
+    content: "";
+    position: absolute; 
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px; 
+    
+}
