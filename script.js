@@ -594,7 +594,7 @@ const textNodes =  [
 
       {
         id: 225,
-        backgroundClass: 'fade-black',
+        backgroundClass: 'ending2',
         text: 'Restart?',
 
         options: [
@@ -677,7 +677,7 @@ const textNodes =  [
         blackoutSfx: 'audio/shot.mp3',
         blackoutMs: 5000, 
         typingSpeed: 80,
-        text: 'It was done. ',
+        text: 'It is done. ',
 
         options: [
             {
