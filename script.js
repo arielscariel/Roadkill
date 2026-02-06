@@ -652,7 +652,7 @@ const textNodes =  [
 
     {
         id: 25,
-        backgroundClass: 'bg-3',
+        backgroundClass: 'bg-4',
         speaker: 'wolf',
         typingSpeed: 80,
         text: 'WAIT! ! ! PL E A SE DON T  SH OOT...',

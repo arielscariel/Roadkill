@@ -192,7 +192,11 @@ body {
 }
 
 .background.bg-3 {
-    background-image: url("img/wolff.gif");
+    background-image: url("img/wolf3.gif");
+}
+
+.background.bg-4 {
+    background-image: url("img/wolf2.gif")
 }
 
 .background::after {
